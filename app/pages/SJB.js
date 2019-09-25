@@ -11,6 +11,8 @@ import BottomNavigation, {
     FullTab
 } from 'react-native-material-bottom-navigation';
 
+import {Agenda} from './Agenda'
+
 const tabs = [
     {
         key: 'edit',
@@ -68,8 +70,8 @@ export default class SJB extends Component {
         return (
             <View style={{ flex: 1 }}>
                 <Swiper scrollEnabled={ false } ref={ ref => this.swiper = ref } style={ globalStyles.containerCenterFlex } loop={ false } showsButtons={ false } showsPagination={ false }>
-                    <View style={{ ...globalStyles.containerCenterFlex, backgroundColor: "#0F0" }}>
-                        <Text style={globalStyles.title}>Edit</Text>
+                    <View style={{ ...globalStyles.containerCenterFlex}}>
+                       <Agenda/>
                     </View>
                     <View style={{ ...globalStyles.containerCenterFlex, backgroundColor: "#0F0" }}>
                         <Text style={globalStyles.title}>Movie</Text>

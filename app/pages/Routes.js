@@ -15,8 +15,9 @@ export default class Routes extends Component {
             <Router cardStyle={{ backgroundColor: "#EFFEFE" }}>
                 <Lightbox>
                     <Stack key="root" hideNavBar transitionConfig={() => ({ screenInterpolator: StackViewStyleInterpolator.forHorizontal })}>
-                        <Scene key="login" component={ Pages.Login }  type={ ActionConst.REPLACE }/>
-                        <Scene key="SJB" component={ Pages.SJB } initial/>
+                        <Scene key="login" component={ Pages.Login }  type={ ActionConst.REPLACE } initial/>
+                        <Scene key="SJB" component={ Pages.SJB } />
+                        <Scene key="Agenda" component={ Pages.Agenda } />
                     </Stack>
                 </Lightbox>
             </Router>
