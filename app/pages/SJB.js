@@ -8,6 +8,7 @@ import BottomNavigation, {
 } from 'react-native-material-bottom-navigation';
 import Agenda from './Agenda';
 import Destaque from './Destaque';
+import Calendario from './Calendario';
 
 const tabs = [
   {
@@ -95,6 +96,7 @@ export default class SJB extends Component {
           </View>
           
           <Destaque />
+          <Calendario/>
           <View
             style={{
               ...globalStyles.containerCenterFlex,

@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import globalStyles from '../styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import Swiper from 'react-native-swiper';
 
 var language;
 var data = [
@@ -126,6 +127,60 @@ export default class Destaque extends Component {
               source={require('../assets/agenda/menu.png')}
             />
           </TouchableOpacity>
+        </View>
+        <View style={{width: "100%", height: "5%",zIndex: 999, justifyContent: "space-between", flexDirection: "row"}}>
+          <View style={{flex:1}}>
+            <Text style={{fontSize: 40, fontWeight: "bold", marginHorizontal: 20, marginTop:10}}>Destaques</Text>
+          </View>
+          <View >
+            <Text style={{fontSize: 18, fontWeight: "bold", color: "#0BF", marginHorizontal:10, marginTop: 10}}>04 / 08 / 2019</Text>
+            <Text style={{fontSize: 18, fontWeight: "bold", color: "#0BF", paddingLeft: 45}}>Domingo</Text>
+          </View>
+        </View>
+        <View style={{height: '35%'}}>
+          <Swiper
+            scrollEnabled={true}
+            ref={ref => (this.swiper = ref)}
+            style={globalStyles.containerCenterFlex}
+            loop={false}
+            showsButtons={false}
+            showsPagination={true}>
+            <View
+              style={{
+                ...globalStyles.containerCenterFlex,
+              }}>
+              <Text
+                style={{
+                  position: 'absolute',
+                  zIndex: 9999,
+                  fontSize: 20,
+                  fontWeight: 'bold',
+                  color: '#FFF',
+                  paddingTop: 200,
+                }}>
+                #FestivalJulinoDoAçu
+              </Text>
+              <Image
+                source={require('../assets/eventos/event-item.png')}
+                resizeMode="stretch"
+                style={{height: '100%', width: '100%'}}
+              />
+            </View>
+            <View
+              style={{
+                ...globalStyles.containerCenterFlex,
+                backgroundColor: '#0F0',
+              }}>
+              <Text>Texto 1</Text>
+            </View>
+            <View
+              style={{
+                ...globalStyles.containerCenterFlex,
+                backgroundColor: '#0F0',
+              }}>
+              <Text>Texto 2</Text>
+            </View>
+          </Swiper>
         </View>
         <View>
           <FlatList data={data} renderItem={this.renderItem}></FlatList>

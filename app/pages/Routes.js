@@ -18,6 +18,8 @@ export default class Routes extends Component {
                         <Scene key="login" component={ Pages.Login }  type={ ActionConst.REPLACE } initial/>
                         <Scene key="SJB" component={ Pages.SJB } />
                         <Scene key="Agenda" component={ Pages.Agenda } />
+                        <Scene key="Calendario" component={ Pages.Calendario } />
+                        <Scene key="Destaque" component={ Pages.Destaque } />
                     </Stack>
                 </Lightbox>
             </Router>
